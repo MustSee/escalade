@@ -1,11 +1,38 @@
 body {
   padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../../images/bkg2.png');
 }
 .starter-template {
   padding: 40px 15px;
 }
 
+.navbar {
+  /*background-image: url('../../images/bkg1.png');*/
+  border: none;
+}
+
+h3, h2 {
+  margin-bottom: 20px;
+}
+
+th, td {
+  text-align: center;
+  width: 25%;
+}
+
 a {
   color: #00B7FF;
+}
+
+a:active {
+  color:white;
+}
+
+.btn-default:hover {
+  background-color: white;
+}
+
+.btn-default:focus {
+  background-color: white;
 }

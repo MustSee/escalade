@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+<% include partials/navigation.ejs %>
+
+<h2> Un commentaire, une question, une envie ? </h2>
+<form action="#" method="POST">
+  <div class="form-group">
+    <label for="pseudo">Votre pseudo *</label>
+    <input type="text" class="form-control" name="pseudo" id="pseudo"
+    placeholder="Pseudo" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Votre email</label>
+    <input type="email" class="form-control" id="email"
+    placeholder="Entrez un mail si vous souhaitez une réponse">
+  </div>
+  <div class="form-group">
+    <label for="comment">Votre commentaire *</label>
+    <textarea class="form-control" name="comment" id="comment"
+    placeholder="Commentaire" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Valider</button>
+</form>
+
+<% include partials/footer.ejs %>
