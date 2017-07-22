@@ -23,7 +23,7 @@ router.get('/insertnews', function(req, res, next){
     resLastInsertNews = resLastInsertInfos.rows[0].news;
     lastEntryId = resLastInsertInfos.rows[0].id_news;
     // On compare avec la valeur que l'on veut entrer
-    fs.readFile('/home/thomas/Development/nodeJS/escalade/phantomtests/infos.txt', 'utf8', function(err, data) {
+    fs.readFile('/tmp/infos.txt', 'utf8', function(err, data) {
       if (resLastInsertNews === data) {
         // Si la valeur est la même, on fait un update row pour modifier seulement
         // la date de mise à jour
