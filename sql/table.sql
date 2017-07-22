@@ -6,6 +6,7 @@ CREATE DATABASE escalade;
 DROP TABLE IF EXISTS lesson_instance_state;
 DROP TABLE IF EXISTS lesson_instance;
 DROP TABLE IF EXISTS lesson;
+DROP TABLE IF EXISTS news;
 
 CREATE TABLE lesson (
   id_lesson SERIAL PRIMARY KEY,
@@ -26,4 +27,11 @@ CREATE TABLE lesson_instance_state (
   created_at TIMESTAMP NOT NULL,
   updated_at TIMESTAMP NOT NULL,
   id_lesson_instance INTEGER REFERENCES lesson_instance
+);
+
+CREATE TABLE infos (
+  id_news SERIAL PRIMARY KEY,
+  news TEXT,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL
 );

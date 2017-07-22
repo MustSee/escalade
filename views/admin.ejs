@@ -1,0 +1,35 @@
+<% include partials/header.ejs %>
+<% include partials/navigation.ejs %>
+
+<!-- Formatage dates : -->
+<% var options = {weekday : "long", month: "long", day: "numeric"}; %>
+
+<div class="row">
+  <div class="col-lg-12">
+    <br>
+    <h2> NEWS </h2>
+    <p>Insérer news: <a href="/admin/insertnews">INSERT NEWS</a> <br>
+      Cette tâche est chez moi effectué par CRON.
+    </p>
+    <p> New crée le : <strong>
+      <% dateCrea = result.created_at %>
+      <%= dateCrea.toLocaleDateString("fr-FR", options)%>
+      à
+      <%= dateCrea.getHours() %>h et <%= dateCrea.getMinutes() %> minutes
+      </strong>
+    </p>
+    <p> Mise à jour le : <strong>
+      <% dateMaj = result.updated_at %>
+      <%= dateMaj.toLocaleDateString("fr-FR", options)%>
+      <%= dateMaj.getHours() %>h et <%= dateMaj.getMinutes() %> minutes
+    </strong>
+    </p>
+    <h3>
+      <%=result.news %>
+    </h3>
+    <br>
+    <hr>
+  </div>
+</div>
+
+<% include partials/footer.ejs %>
